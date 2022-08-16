@@ -42,11 +42,16 @@ function createContact(){
     openHours.appendChild(createTime('monday-friday','8','6'));
     openHours.appendChild(createTime('saturday-sunday','9','6'));
 
+    const contactContainer =document.createElement('div');
+    contactContainer.classList.add('contact-container');
+
+    contactContainer.appendChild(contactHeader);
+    contactContainer.appendChild(address);
+    contactContainer.appendChild(phoneNumber);
+    contactContainer.appendChild(openHours);
+
     contact.appendChild(contactImg);
-    contact.appendChild(contactHeader);
-    contact.appendChild(address);
-    contact.appendChild(phoneNumber);
-    contact.appendChild(openHours);
+    contact.appendChild(contactContainer);
 
     return contact;
 }

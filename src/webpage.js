@@ -15,12 +15,14 @@ function createHeader(){
 
     //navigation bar
     const navBar = document.createElement('nav');
+    navBar.classList.add('nav-bar');
 
     //home button
     const homeBtn = document.createElement('button');
     homeBtn.classList.add('nav-btn');
     homeBtn.textContent = 'home';
     homeBtn.addEventListener('click', () => {
+        addActiveClass(homeBtn);
         loadHome();
     });
 
@@ -29,6 +31,7 @@ function createHeader(){
     menuBtn.classList.add('nav-btn')
     menuBtn.textContent = 'menu';
     menuBtn.addEventListener('click', () => {
+        addActiveClass(menuBtn);
         loadMenu();
     });
 
@@ -37,6 +40,7 @@ function createHeader(){
     contactBtn.classList.add('nav-btn');
     contactBtn.textContent = 'contact';
     contactBtn.addEventListener('click', () => {
+        addActiveClass(contactBtn);
         loadContact();
     });
 
@@ -50,6 +54,18 @@ function createHeader(){
     header.appendChild(navBar);
 
     return header;
+}
+
+function addActiveClass(activeBtn){
+    const buttons = document.querySelectorAll('.nav-btn');
+
+    buttons.forEach((button) => {
+        if(button != this){
+            button.classList.remove('active');
+        }
+    });
+
+    activeBtn.classList.add('active');
 }
 
 function createMain(){
@@ -84,6 +100,9 @@ function loadWebpage(){
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
-    loadHome();
+
+    addActiveClass(document.querySelector('.nav-btn'));
+    //loadHome();
+    loadContact();
 }
 export default loadWebpage;

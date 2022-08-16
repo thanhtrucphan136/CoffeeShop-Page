@@ -1,5 +1,12 @@
+:root{
+    --font-color: rgb(123, 95, 67);
+    --background-color: rgb(233,213,193);
+    --shadow: rgba(0,0,0,0.16) 6px 6px 5px;
+}
 body{
     margin: 0;
+    color: var(--font-color);
+    font-family: monospace;
 }
 
 #content{
@@ -15,7 +22,38 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: var(--background-color);
+    margin: 0;
+    box-shadow: rgba(0,0,0,0.16) 0px 6px 5px;;
 }
+.shop-name{
+    color: var(--font-color);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-bar{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn{
+    border: none;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    cursor: pointer;
+    
+}
+.nav-btn.active{
+    border-bottom: 2px solid var(--font-color);
+    font-size: 18px;
+}
+.nav-btn:hover{
+    transform: translateY(10%);
+}
+
 /* home */
 .home{
     display: flex;
@@ -36,6 +74,7 @@ header{
 }
 .shop-img{
     width: 550px;
+    margin-top: 10px;
 }
 
 /* menu */
@@ -46,8 +85,17 @@ header{
     justify-content: center;
     align-items: center;
 }
-.coffee{
-    margin-top: 0;
+.coffee, .croffle{
+    margin-top: 20px;
+    border: 1px solid var(--font-color);
+    border-radius: 10px 20px;
+    width: 750px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow)
 }
 .img-container{
     display: flex;
@@ -59,30 +107,44 @@ header{
 }
 .menu-title{
     font-size: 35px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--font-color);
+    width: 90px;
+    margin-left: -600px;
 }
 .items{
     display: flex;
     justify-content: space-between;
     width: 700px;
     align-items: center;
+    margin-left: 10px;
 }
 .item-container{
     display: flex;
     justify-content: space-between;
     width: 300px;
 }
-
 .croffle-img{
     width: 650px;
 }
 
-.contact{
+/*contact*/
+.contact, .contact-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.contact-container{
+    border: 1px solid var(--font-color);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    width: 350px;
+    padding: 10px;
+    box-shadow: var(--shadow)
+}
+
 .contact-img{
     width: 300px;
     margin: 10px;
@@ -92,13 +154,13 @@ header{
     margin: 0;
 }
 .phone{
-    margin-left: -105px;
+    margin-left: -148px;
     margin-top: 0;
 }
 .day{
     display: flex;
     justify-content: space-between;
-    margin-left: -46px;
+    margin-left: -86px;
     margin-top: 0;
     gap: 10px;
 }
