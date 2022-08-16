@@ -1,5 +1,6 @@
 import './style.css';
 import githubIcon from './github.png';
+import loadHome from './home';
 
 function createHeader(){
     const header = document.createElement('header');
@@ -58,7 +59,7 @@ function createFooter(){
 
     const icon = new Image();
     icon.src = githubIcon;
-
+    icon.classList.add('github');
     source.appendChild(icon);
 
     footer.appendChild(source);
@@ -72,5 +73,6 @@ function loadWebpage(){
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+    loadHome();
 }
 export default loadWebpage;
