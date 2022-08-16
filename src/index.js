@@ -1,1 +1,3 @@
-console.log('Hellooo');
+import loadWebpage from './webpage';
+
+loadWebpage();
