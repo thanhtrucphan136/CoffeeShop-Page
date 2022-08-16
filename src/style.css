@@ -8,8 +8,14 @@ body{
     min-height: 100vh;
     align-items: center;
     margin: 0;
+    justify-content: space-between;
 }
-
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* home */
 .home{
     display: flex;
@@ -70,8 +76,35 @@ body{
 .croffle-img{
     width: 650px;
 }
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-img{
+    width: 300px;
+    margin: 10px;
+}
+.contact-header{
+    font-size: 30px;
+    margin: 0;
+}
+.phone{
+    margin-left: -105px;
+    margin-top: 0;
+}
+.day{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -46px;
+    margin-top: 0;
+    gap: 10px;
+}
 footer{
-    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-top: 50px;
 }
 .github{
     width: 20px;

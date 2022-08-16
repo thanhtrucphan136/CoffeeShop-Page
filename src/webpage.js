@@ -2,6 +2,7 @@ import './style.css';
 import githubIcon from './github.png';
 import loadHome from './home';
 import loadMenu from './menu';
+import loadContact from './contact';
 
 function createHeader(){
     const header = document.createElement('header');
@@ -19,16 +20,25 @@ function createHeader(){
     const homeBtn = document.createElement('button');
     homeBtn.classList.add('nav-btn');
     homeBtn.textContent = 'home';
+    homeBtn.addEventListener('click', () => {
+        loadHome();
+    });
 
     //menu button
     const menuBtn = document.createElement('button');
     menuBtn.classList.add('nav-btn')
     menuBtn.textContent = 'menu';
+    menuBtn.addEventListener('click', () => {
+        loadMenu();
+    });
 
     //contact button
     const contactBtn = document.createElement('button');
     contactBtn.classList.add('nav-btn');
     contactBtn.textContent = 'contact';
+    contactBtn.addEventListener('click', () => {
+        loadContact();
+    });
 
     //append buttons to navigation bar
     navBar.appendChild(homeBtn);
@@ -74,7 +84,6 @@ function loadWebpage(){
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
-    //loadHome();
-    loadMenu();
+    loadHome();
 }
 export default loadWebpage;
