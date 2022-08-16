@@ -102,7 +102,6 @@ function loadWebpage(){
     content.appendChild(createFooter());
 
     addActiveClass(document.querySelector('.nav-btn'));
-    //loadHome();
-    loadContact();
+    loadHome();
 }
 export default loadWebpage;
