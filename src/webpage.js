@@ -1,6 +1,7 @@
 import './style.css';
 import githubIcon from './github.png';
 import loadHome from './home';
+import loadMenu from './menu';
 
 function createHeader(){
     const header = document.createElement('header');
@@ -73,6 +74,7 @@ function loadWebpage(){
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
-    loadHome();
+    //loadHome();
+    loadMenu();
 }
 export default loadWebpage;
