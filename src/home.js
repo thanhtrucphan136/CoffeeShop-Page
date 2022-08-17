@@ -14,7 +14,7 @@ function createHome(){
 
     const quote = document.createElement('p');
     quote.classList.add('quote');
-    quote.textContent = 'we are here to fuel you happy thoughts and COFFEE :)';
+    quote.textContent = 'we are here to fuel you with happy thoughts and COFFEE :)';
 
     left.appendChild(welcome);
     left.appendChild(quote);

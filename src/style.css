@@ -238,7 +238,7 @@ footer{
     }
     .coffee, .croffle{
         width: 280px;
-        padding: 20px;
+        padding: 20px 40px;
     }
     .coffee-img{
         width: 160px;
@@ -254,7 +254,7 @@ footer{
     margin-left: 3px;
     }
     .item-container{
-        width: 120px;
+        width: 130px;
     }
     .croffle-img{
         width: 280px;
